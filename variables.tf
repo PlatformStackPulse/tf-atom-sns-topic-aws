@@ -1,7 +1,17 @@
-# -----------------------------------------------------------------------------
-# Module-Specific Variables
-#
-# Note: Standard labeling variables (enabled, namespace, tenant, environment,
-# stage, name, delimiter, attributes, tags, label_order, etc.) are provided
-# by context.tf via the tf-label module.
-# -----------------------------------------------------------------------------
+variable "fifo_topic" {
+  description = "Whether this is a FIFO topic"
+  type        = bool
+  default     = false
+}
+
+variable "kms_master_key_id" {
+  description = "KMS key ID for encryption"
+  type        = string
+  default     = null
+}
+
+variable "display_name" {
+  description = "Display name for SMS subscriptions"
+  type        = string
+  default     = null
+}
